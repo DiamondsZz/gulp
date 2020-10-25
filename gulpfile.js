@@ -57,7 +57,7 @@ const script = () => {
 //脚本编译
 const page = () => {
   return (
-    src("src/**/*.html", { base: "src" })
+    src("src/*.html", { base: "src" })
       .pipe(
         plugins.swig({
           // defaults: {
@@ -127,7 +127,7 @@ const useref = () => {
 const server = () => {
   watch("src/assets/styles/*.scss", style);
   watch("src/assets/scripts/*.js", script);
-  watch("src/**/*.html", page);
+  watch("src/*.html", page);
   //图片、字体
   watch(
     ["src/assets/images/**", "src/assets/fonts/**", "public/**"],
